@@ -1,12 +1,37 @@
-* {
-    box-sizing: border-box;
-    font-family: IBMPlexMono-Light;
-    font-style: italic;
+@font-face {
+    font-family: 'IBMPlexMono';
+    font-weight: 300;
+    src: url('assets/fonts/ibmplexmono-light-webfont.woff2') format('woff2'),
+         url('assets/fonts/ibmplexmono-light-webfont.woff') format('woff');
 }
 
-@font-face {
-    font-family: "IBMPlexMono-Light";
-    font-style: normal;
-    font-display: optional;
-    src: url(/fonts/IBM_plex_Mono.woff2) format("woff2");
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBMPlexMono', sans-serif;
+    margin-top: 0;
+}
+
+#top-container {
+    display: grid;
+    grid-template-columns: 1fr 1000px;
+}
+
+#left-page {
+    width: 700px;
+    grid-column: 1 / 2;
+}
+
+#right-page {
+    background-color: white;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr / 1fr / 1fr;
+}
+
+.input_area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
